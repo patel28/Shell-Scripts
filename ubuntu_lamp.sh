@@ -38,6 +38,9 @@ then
 	echo -e "\n\n************++ Adding Softlink ++***********\n\n"
 	$rand_str = date |  md5sum | cut -d"-" -f1 -
 	ln -s /usr/share/phpmyadmin/ /var/www/html/$rand
+	
+	echo -e "\n\n************++ PMA url ++***********\n\n"
+	echo $rand
 else 
 	echo "Invalid Input"
 	exit 1
