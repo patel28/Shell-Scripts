@@ -35,6 +35,9 @@ then
 	sudo apt install php-fpm php-mysql php-zip -y
 	echo -e "\n\n************++ Installing PhpMyAdmin ++***********\n\n"
 	sudo apt install phpmyadmin -y
+	echo -e "\n\n************++ Adding Softlink ++***********\n\n"
+	$rand_str = "axgbeBA1na"
+	ln -s /usr/share/phpmyadmin/ /var/www/html/$rand
 else 
 	echo "Invalid Input"
 	exit 1
