@@ -28,9 +28,12 @@ elif [ "$SERVER" = "2" ]
 then
 	echo -e "\n\n************++ Installing Nginx ++***********\n\n"
 	sudo apt install nginx -y
+	echo -e "\n\n************++ Installing MySQL ++***********\n\n"
 	sudo apt install mysql-server -y 
 	mysql_secure_installation -y
+	echo -e "\n\n************++ Installing PHP ++***********\n\n"
 	sudo apt install php-fpm php-mysql php-zip -y
+	echo -e "\n\n************++ Installing PhpMyAdmin ++***********\n\n"
 	sudo apt install phpmyadmin -y
 else 
 	echo "Invalid Input"
