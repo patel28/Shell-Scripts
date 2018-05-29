@@ -36,7 +36,7 @@ then
 	echo -e "\n\n************++ Installing PhpMyAdmin ++***********\n\n"
 	sudo apt install phpmyadmin -y
 	echo -e "\n\n************++ Adding Softlink ++***********\n\n"
-	$rand_str = "axgbeBA1na"
+	$rand_str = date |  md5sum | cut -d"-" -f1 -
 	ln -s /usr/share/phpmyadmin/ /var/www/html/$rand
 else 
 	echo "Invalid Input"
