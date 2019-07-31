@@ -18,7 +18,7 @@ then
 	echo -e "\n\n************++ Securing Mysql ++***********\n\n"
 	mysql_secure_installation
 	echo -e "\n\n************++ Installing PHP ++***********\n\n"
-	sudo apt install php libapache2-mod-php php-mcrypt php-mysql
+	sudo apt install php libapache2-mod-php php-mcrypt php-mysql php-curl
 	echo -e "\n\n************++ Installing PhpMyAdmin ++***********\n\n"
 	sudo apt install phpmyadmin php-mbstring php-gettext
 	sudo phpenmod mcrypt
@@ -32,7 +32,7 @@ then
 	sudo apt install mysql-server -y 
 	mysql_secure_installation -y
 	echo -e "\n\n************++ Installing PHP ++***********\n\n"
-	sudo apt install php-fpm php-mysql php-zip -y
+	sudo apt install php-fpm php-mysql php-zip php-curl php-mcrypt php-mbstring php-common php-cli php-json -y
 	echo -e "\n\n************++ Installing PhpMyAdmin ++***********\n\n"
 	sudo apt install phpmyadmin -y
 	echo -e "\n\n************++ Adding Softlink ++***********\n\n"
